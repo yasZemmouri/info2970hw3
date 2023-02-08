@@ -1,0 +1,336 @@
+<html>
+
+<head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+    <title>Assignment 3 - Time class</title>
+    <style type="text/css">
+        .style1 {
+            font-family: "Courier New", Courier, monospace;
+        }
+
+        .auto-style1 {
+            font-family: Arial;
+        }
+
+        .auto-style2 {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .auto-style3 {
+            color: #000000;
+        }
+
+        .auto-style4 {
+            color: #0000FF;
+        }
+    </style>
+</head>
+
+<body bgcolor="ffffff" link="000080" vlink="000080" alink="000080">
+    <table>
+        <tr>
+            <td>
+                <font color="green" size="4" face="Arial">Assignment 3 - Time class</font>
+                <font face="verdana, arial" size=-1 color="gree">
+                    <! /font>
+                </font>
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>
+                <H4>
+                    <FONT face=Arial><br> Skills</FONT>
+                </H4>
+                <UL>
+                    <LI>
+                        <FONT face=Arial>Basic Java class structure</FONT>
+                    <LI>
+                        <FONT face=Arial>Class instance variables</FONT>
+                    <LI>
+                        <FONT face=Arial>Primitive and String variables</FONT>
+                    <LI>
+                        <FONT face=Arial>String class methods</FONT>
+                    <LI>
+                        <FONT face=Arial>Implementing <FONT face="Courier New">equals </FONT>method to compare the state
+                            (values) of two </FONT>
+                        <FONT face="Courier New"> MyTime</FONT>
+                        <FONT face=Arial> objects</FONT>
+                    </LI>
+                </UL>
+                <H4>
+                    <FONT face=Arial>Description</FONT>
+                </H4>
+                <P>
+                    <FONT face=Arial>In this assignment, you'll write a Java class with instance variables and methods,
+                        create objects of the&nbsp;class, and invoke methods on them. <mark>Your class will provide an
+                            <FONT face="Courier New">equals</FONT> method to allow comparison of two objects to see if
+                            they contain identical values.</FONT></mark>
+                </P>
+                <P>
+                    <FONT face=Arial>Write a Java class called </FONT>
+                    <FONT face=Courier>MyTime</FONT>
+                    <FONT face=Arial> that represents a 24 hour clock (i.e. ranges from 00:00:00 to 23:59:59). It should
+                        have private integer instance variables for hour, minute, and second, and should have the
+                        following public methods:</FONT>
+                </P>
+                <blockquote>
+                    <P>
+                        <FONT face=Courier><EM style="font-style: normal">public void setTime(int hour, int minute, int
+                                second)</EM></FONT>
+                        <FONT face=Arial> - this method will set the object's instance&nbsp;variables to the specified
+                            24 hour time..&nbsp;It must <EM>first</EM>&nbsp;test its parameter values for a valid time
+                            being supplied by the calling code, according to the following rules:, </FONT>
+                    </P>
+                    <UL>
+                        <LI>
+                            <FONT face=Arial>Hour must be in the range of 0 to 23.</FONT>
+                        <LI>
+                            <FONT face=Arial>Minute and second must be in the range of 0 to 59.</FONT>
+                        </LI>
+                    </UL>
+                    <P>
+                        <FONT face=Arial>If <EM>any</EM> of the parameters are outside these limits, it must set <EM>all
+                                three</EM> instance variables to zero (representing midnight). If the parameters
+                            represent a valid time, then it sets the instance variables to that time.</FONT>
+                    </P>
+                    <P>
+                        <FONT face=Courier><EM style="font-style: normal">public int getHour()</EM></FONT>
+                        <FONT face=Arial> - this method returns the object's hour value.</FONT>
+                    </P>
+                    <P>
+                        <FONT face=Courier><EM style="font-style: normal">public int getMinute()</EM></FONT>
+                        <FONT face=Arial> - this method returns the object's minute value.</FONT>
+                    </P>
+                    <P>
+                        <FONT face=Courier><EM style="font-style: normal">public int getSecond()</EM></FONT>
+                        <FONT face=Arial> - this method returns the object's second value.</FONT>
+                    </P>
+                    <P>
+                        <FONT face=Courier><EM style="font-style: normal">public boolean equals(MyTime other)</EM>
+                        </FONT>
+                        <FONT face=Arial> - this method compares the time represented by <EM>two</EM>
+                            <FONT face="Courier New">MyTime</FONT> objects. It compares the time represented by&nbsp;
+                            <FONT face="Courier New"><STRONG>this</STRONG></FONT>
+                            <FONT face="Courier New">MyTime</FONT> object with the time represented by&nbsp;the
+                            parameter <EM>other</EM>
+                            <FONT face="Courier New">MyTime</FONT> object, returning <FONT face="Courier New">true
+                            </FONT> if they represent the same time. The parameter <EM>other</EM>&nbsp;is a reference to
+                            another <FONT face="Courier New">MyTime</FONT> object passed into this method by the calling
+                            code. To check for equality, this method must compare the three instance variables of
+                            <STRONG>this</STRONG> MyTime object with the three instance variables of the <EM>other</EM>
+                            MyTime object, returning <FONT face="Courier New">true</FONT> if all three&nbsp;match, and
+                            <FONT face="Courier New">false</FONT> otherwise. This method is required to compare the
+                            <i>value</i> of two
+                        </FONT>
+                        <FONT face="Courier New">MyTime</FONT>
+                        <FONT face=Arial> objects, as the == operator compares the two operand's object references
+                            (memory addresses) to see if they refer to the same object (which is not what we want).
+                        </FONT>
+                    </P>
+                    <P>
+                        <FONT face=Courier><EM style="font-style: normal">public String toString()</EM></FONT>
+                        <FONT face=Arial> - this method returns the object's time value formatted as a String of the
+                            form <FONT face="Courier New"><STRONG>hh:mm:ss AM</STRONG></FONT> or </FONT>
+                        <FONT face="Courier New"><STRONG>PM</STRONG>.</FONT>
+                        <FONT face=Arial> The minutes and seconds must be two digits (ie. if less than 10, add a leading
+                            zero), but the hour doesn't have a leading zero. Call the</FONT><span class="style1">
+                            twoDigits</span>
+                        <FONT face=Arial> method to convert the minutes and seconds values to strings. The displayed
+                            hour is in the range 1 to 12. <b>Midnight</b> is returned as <b>12:00:00 AM</b>,&nbsp;
+                            <b>noon</b> as <b>12:00:00 PM</b>, 9 AM as 9:00:00 AM, 3 PM as 3:00:00 PM. (Note - <i>there
+                                is no 0 AM or 0 PM in this format</i>, it must be 12 AM (midnight) or 12 PM (noon)).
+                            This method should <strong>not</strong> change the instance variables. Use a local variable
+                            to hold the hour value that must range from 1 to 12.</FONT>
+                    </P>
+                    <P>
+                        <FONT face=Courier><EM style="font-style: normal">public String toUniversalString()</EM></FONT>
+                        <FONT face=Arial> - this method returns the object's time value formatted as a String of the
+                            form <FONT face="Courier New"><STRONG>hh:mm:ss</STRONG></FONT> in 24 hour format (military
+                            time). The hours, minutes, and seconds must all be two digits. Call the </FONT><span
+                            class="style1">twoDigits</span>
+                        <FONT face=Arial> method to convert each value to a string. <b>Midnight</b> is returned
+                            as&nbsp;<b>00:00:00</b>, <b>&nbsp;noon</b> as <b>12:00:00</b>,&nbsp; 9 AM as 09:00:00, 3 PM
+                            as 15:00:00. This method should <strong>not</strong> change the instance variables.</FONT>
+                    </P>
+                    <P><em style="font-style: normal">
+                            <font face="Courier">private String twoDigits(int val)</font>
+                            <FONT face=Arial>
+                            </FONT>
+                        </em>
+                        <FONT face=Arial>-&nbsp;this <STRONG>private</STRONG> method returns it's int parameter value
+                            formatted as a two digit String (e.g calling it with the value 5 returns the string
+                            &quot;05&quot;, calling it with the value 20 returns the string &quot;20&quot;).&nbsp;It can
+                            use either the String.valueOf(int) method or Integer.toString(int) method to do the
+                            conversion. Call twoDigits() from the <EM>toString </EM>and&nbsp; <EM>toUniversalString
+                            </EM>methods in order to format the individual time fields as two digits where required.
+                            This method is made private so it cannot be called by methods in other classes. </FONT>
+                    </P>
+                </blockquote>
+                <P>
+                    <FONT face=Arial>Note:&nbsp; the <STRONG>main()</STRONG> method for testing this class is supplied
+                        for you in the MyTimeDemo.java file attached to this assignment.&nbsp; Do NOT write your own
+                        main() method for this homework.</FONT>
+                </P>
+                <H4>
+                    <FONT face=Arial>Sample output</FONT>
+                </H4>
+                <P>
+                    <FONT face="Courier New">Enter hour, minute, and second (-1 to exit)<BR> 10 20 30</FONT>
+                </P>
+                <P>
+                    <FONT face="Courier New">Values read were: 10 20 30<BR> 10:20:30 AM<BR> 10:20:30<BR> hour is
+                        10&nbsp; minute is 20&nbsp; second is 30</FONT>
+                </P>
+                <P>
+                    <FONT face="Courier New">Enter hour, minute, and second (-1 to exit)<BR> 13 5 5</FONT>
+                </P>
+                <P>
+                    <FONT face="Courier New">Values read were: 13 5 5<BR> 1:05:05 PM<BR> 13:05:05<BR> hour is 13&nbsp;
+                        minute is 5&nbsp; second is 5</FONT>
+                </P>
+                <P>
+                    <FONT face="Courier New">Enter hour, minute, and second (-1 to exit)<BR> 25 10 20</FONT>
+                </P>
+                <P>
+                    <FONT face="Courier New">Values read were: 25&nbsp;10 20<BR> 12:00:00 AM<BR> 00:00:00<BR> hour is
+                        0&nbsp; minute is 0&nbsp; second is 0</FONT>
+                </P>
+                <P>
+                    <FONT face="Courier New">Enter hour, minute, and second (-1 to exit)<BR> -1</FONT>
+                </P>
+                <H4>
+                    <FONT face=Arial>Test Data</FONT>
+                </H4>
+                <P>
+                    <FONT face=Arial>Use <STRONG>all</STRONG>&nbsp;the following test data, followed by some of your own
+                        examples.</FONT>
+                </P>
+                <P>
+                    <FONT face="Courier New">10&nbsp;20 30<BR> 1&nbsp; 1&nbsp; 1<BR> 13 1&nbsp; 1<BR> 0&nbsp; 0&nbsp;
+                        0<BR> 23&nbsp; 59&nbsp; 59<BR> 12&nbsp; 0&nbsp; 0<br>6&nbsp; 30&nbsp; 0<BR> 24&nbsp; 30 15<BR>
+                        12&nbsp; 60&nbsp;15<BR> 12&nbsp; 30 60</FONT>
+                </P>
+                <FONT face="Courier New">
+                    <H4>
+                        <FONT face=Arial>MyTimeDemo with main() test code</FONT>
+                    </H4>
+                </FONT>
+                <p class="auto-style2">This homework has two .java files you'll need to download.&nbsp; </p>
+                <FONT face="Courier New">
+                    <P>
+                        <!--StartFragment -->
+                        <FONT face=Arial>
+                            <FONT class="auto-style4"><strong>Use the attached MyTime.java source file as a starting
+                                    template</strong></FONT>
+                            <span class="auto-style4"><strong>for writing your MyTime class</strong></span>
+                            <FONT color=red>. </FONT>&nbsp;It contains an outline of the class and methods needed, and
+                            you'll add the implementation code for each of the methods.
+                        </FONT>
+                    </P>
+                    <P>
+                        <FONT color=red face="Arial"><span class="auto-style4"><strong>Use the attached MyTimeDemo.java
+                                    source file to test your completed MyTime.java class</strong></span>. <span
+                                class="auto-style3">It</span>
+                            <FONT face=Arial><span class="auto-style3"> contains just the supplied <FONT
+                                        face="Courier New">main()</FONT> method test code for testing your MyTime
+                                    class</span></FONT>
+                        </FONT>
+                    </P>
+                    <P>
+                        <FONT face=Arial>Compile your <FONT face="Courier New">MyTime.java</FONT> file first, then
+                            the&nbsp; <FONT face="Courier New">MyTimeDemo.java</FONT> file next. </FONT>
+                    </P>
+                    <P>
+                        <FONT face=Arial>Note: you must re-compile the <FONT face="Courier New">MyTimeDemo.java</FONT>
+                            class whenever you change any method signatures (method name, parameters, return type) in
+                            your <FONT face="Courier New">MyTime</FONT> class.</FONT>
+                    </P>
+                </FONT>
+                <P><span class="auto-style1">When using NetBeans (or other IDE) for this homework, you'll need to copy
+                        the downloaded files into the project's source folder. Do the following:</span></P>
+                <ol>
+                    <li class="auto-style2">Create the NetBeans project for the homework, which will create a .java file
+                        and default main() method.</li>
+                    <li class="auto-style2">Copy the 'package' statement from the NetBeans created .java file.</li>
+                    <li class="auto-style2">Download the <span class="style1">MyTime.java</span> and <span
+                            class="style1">MyTimeDemo.java</span> file into the same source folder.&nbsp; They should
+                        appear in the NetBeans project window as part of the project.</li>
+                    <li class="auto-style2">Add the 'package' statement copied in step 2 to the top of <span
+                            class="style1">MyTime.java</span> and <span class="style1">MyTimeDemo.java</span></li>
+                    <li class="auto-style2">Delete the original .java file created by NetBeans by right clicking on the
+                        filename in the project window, and select 'Delete'.</li>
+                    <li class="auto-style2">From the 'Run' menu, select 'Build Project'.&nbsp; If NetBeans asks about a
+                        class with a main method,&nbsp; select <span class="style1">MyTimeDemo.java</span>.</li>
+                </ol>
+                <P>&nbsp;</P>
+                <H4>
+                    <FONT face=Arial>Getting Started</FONT>
+                </H4>
+                <P>
+                    <!--StartFragment -->
+                    <FONT face=Arial>
+                        <FONT class="auto-style4"><strong>Use the attached MyTime.java source file as a starting
+                                template</strong></FONT>
+                        <span class="auto-style4"><strong>for writing your MyTime class.</strong></span> This provides
+                        the basic class structure to get you started writing this Java class.
+                    </FONT>
+                </P>
+                <P>
+                    <FONT face=Arial>The <FONT face="Courier New">setTime()</FONT> method <EM>first</EM> checks its
+                        parameters to see if they represent a valid time.&nbsp; If not, it sets <EM>all three</EM> of
+                        its instance variables to zero and returns.&nbsp; Otherwise, it sets the three instance
+                        variables to the time specified by the three parameter variables.</FONT>
+                </P>
+                <P>
+                    <FONT face=Arial>The <FONT face="Courier New">toString()</FONT> method must format
+                        <STRONG>this</STRONG> MyTime object's 24 hour time value into AM/PM time string. Once again,
+                        outline the logic needed to determine the hour and AM/PM value to be returned&nbsp;before you
+                        start writing Java code, something like:</FONT>
+                </P>
+                <blockquote>
+                    <P>
+                        <FONT face="Courier New">if the mHour instance value is 0 or 12, <BR>&nbsp; the&nbsp;formatted
+                            hour is 12 (either midnight or noon).<BR>else<BR>&nbsp; the formatted hour is mHour modulo
+                            12<BR>
+                            <BR>if the mHour instance value is less than 12<BR>&nbsp; the time is AM (00:00:00 is 12
+                            o'clock AM - midnight)<BR>else<BR>&nbsp; the time is PM (12:00:00 is 12 o'clock PM -
+                            noon)<BR>
+                        </FONT>
+                    </P>
+                </blockquote>
+                <P>
+                    <FONT face=Arial> Format the string to be returned using the hour value calculated above, the
+                        mMinute and mSecond instance values, and the AM/PM calculated above. Call twoDigits() on the
+                        mMinute and mSecond values to ensure they are formatted as two digits.</FONT>
+                </P>
+                <P>
+                    <FONT face=Arial>The <FONT face="Courier New">twoDigits()</FONT> method is an internal (private)
+                        'helper' method called by the </FONT>
+                    <FONT face=Courier>toString()</FONT>
+                    <FONT face=Arial> and </FONT>
+                    <FONT face=Courier>toUniversalString()</FONT>
+                    <FONT face=Arial> methods when formatting the time value into string format. It converts its int
+                        parameter value into a string, adds a leading &quot;0&quot; if needed to make the string two
+                        digits long, then returns the string.. Again, outline the logic needed, something like:</FONT>
+                </P>
+                <blockquote>
+                    <P>
+                        <FONT face="Courier New">If the parameter value is less than 10<BR>&nbsp; return "0"
+                            concatenated with the parameter value<BR>&nbsp;&nbsp;&nbsp; converted to a string using
+                            Integer.toString(val)<BR>else<BR>&nbsp; return the parameter value converted to
+                            string<BR>&nbsp;&nbsp;&nbsp; using Integer.toString(val)</FONT>
+                    </P>
+                </blockquote>
+                <P>
+                    <FONT face=Arial>It's common for classes to define private methods containing code that several
+                        other of their &nbsp;methods call.</FONT>
+                </P>
+            </td>
+        </tr>
+    </table>
+    <p>
+</BODY>
+
+</HTML>
