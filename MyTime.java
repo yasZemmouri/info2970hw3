@@ -76,7 +76,7 @@ public class MyTime {
         // TODO - add code to return 'true' if 'this' MyTime matches
         // the time values in the 'other' MyTime object, else return false.
         // myCom: I'm not sure.
-        //No need for this?
+        // No need for this?
         return (mHour == other.mHour) &&
                 (mMinute == other.mMinute) &&
                 (mSecond == other.mSecond);
@@ -97,7 +97,7 @@ public class MyTime {
         String result = "";
         // format hours
         String hh = "", mm = "", ss = "", ampm = "";
-        if (mHour < 0 && mHour <= 12)
+        if (mHour > 0 && mHour <= 12)
             hh = twoDigits(mHour);
         else if (mHour > 12)
             hh = twoDigits(mHour - 12);
