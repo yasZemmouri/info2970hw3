@@ -75,9 +75,15 @@ public class MyTime {
     public boolean equals(MyTime other) {
         // TODO - add code to return 'true' if 'this' MyTime matches
         // the time values in the 'other' MyTime object, else return false.
+        // myCom: I'm not sure.
+        //No need for this?
+        return (mHour == other.mHour) &&
+                (mMinute == other.mMinute) &&
+                (mSecond == other.mSecond);
 
-        return false;
+        // return false;
     }
+    // ========================================================================================================FIN=================
 
     /**
      * Returns the time of this MyTime object in HH:MM:SS AM/PM form.
@@ -89,6 +95,21 @@ public class MyTime {
      */
     public String toString() {
         String result = "";
+        // format hours
+        String hh = "", mm = "", ss = "", ampm = "";
+        if (mHour < 0 && mHour <= 12)
+            hh = twoDigits(mHour);
+        else if (mHour > 12)
+            hh = twoDigits(mHour - 12);
+        else if (mHour == 0)
+            hh = "12";
+        mm = twoDigits(mMinute);
+        ss = twoDigits(mSecond);
+        if (mHour < 12)
+            ampm = "AM";
+        else
+            ampm = "PM";
+        result = hh + ":" + mm + ":" + ss + " " + ampm;
 
         // TODO - add code to format the time in the instance variables
         // into HH:MM:SS AM/PM time (hour ranges from 1 to 12, AM or PM)
@@ -106,6 +127,11 @@ public class MyTime {
      */
     public String toUniversalString() {
         String result = "";
+        String hh = "", mm = "", ss = "";
+        hh = twoDigits(mHour);
+        mm = twoDigits(mMinute);
+        ss = twoDigits(mSecond);
+        result = hh + ":" + mm + ":" + ss;
 
         // TODO - add code to format the time in the instance variables
         // into HH:MM:SS universal time (hour ranges from 0 to 23)
@@ -123,6 +149,7 @@ public class MyTime {
      */
     private String twoDigits(int value) {
         String result = "";
+        result = String.format("%02d", value);
 
         // TODO - Use the Integer.toString(int) method to convert
         // 'value' to String format, and add a leading "0" if
